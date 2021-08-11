@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="vierport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" type="text/css" href="index.css">
+        <title>Registro</title>
+    </head>
+
+<style type="text/css">
+    
+    #wrapper {
+        display: inline-block;
+        width:400px;
+        padding-left: 250px;
+        font-family:Verdana, sans-serif;
+    }
+
+    fieldset {
+        text-align: center;
+        border-radius: 10px;
+        padding:20px;
+        border-color:rgb(0, 0, 0);
+    }
+    input {
+        background: #fff;
+        border: 1px solid #CCCCCC;
+        font-size: 14px;
+        margin-bottom:15px;
+        border-radius:4px;
+    }
+    input[type="text"]{
+        padding: 8px 6px;
+        height: 22px;
+        width:280px;
+    }
+
+    input[type="submit"]{
+        background: #222;
+        text-transform:uppercase;
+        color: #eee;
+        cursor: pointer;
+        font-size: 15px;
+        padding: 5px 22px;
+    }
+</style> 
+
+    <body style="background-color: #b0d4ee;">
+        <div id="wrapper" >
+            <form action="/add" method="POST">
+                <p><h1>Registro de Estudiantes</h1></p>
+                    <fieldset style="background-color: #8ecae6;">
+                        <input type="text" name="first_name" placeholder="First Name"/>
+                        <input type="text" name="last_name" placeholder="Last Name"/>
+                        <input type="text" name="DNI" placeholder="DNI"/>
+                        <input type="text" name="address" placeholder="Address"/>
+                        <input type="text" name="telephone" placeholder="Telephone"/>
+                        <input type="text" name="email" placeholder="Email"/>
+                        <input type="text" name="age" placeholder="Age"/>
+                        <br>
+                        <input type="submit" value="Enviar"/>
+                    </fieldset>    
+            </form>
+        </div>
+    <div id="wrapper" >
+        <p><h1>Subida de Archivos</h1></p>
+            <form  action="/files/documentos" method="POST" enctype="multipart/form-data" style="background-color: #8ecae6;">
+                <fieldset>
+                    <p><h3>Subir Documento de Cedula Escaneada</h3></p>
+                    <input type="file" name="avatar2" multiple> <br> <br>
+                    <input type="submit" value="Enviar">
+                </fieldset>
+            </form>
+            <form action="/files/img" method="POST" enctype="multipart/form-data" style="background-color: #8ecae6;">
+                <fieldset>
+                    <p><h3>Subir Foto de Cedula Escaneada</h3></p>
+                    <input type="file" name="avatar" multiple> <br> <br>
+                    <input type="submit" value="Enviar">
+                </fieldset>
+            </form>
+    </div>
+    </body>
+</html>
